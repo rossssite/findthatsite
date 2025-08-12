@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whatsitcalledagain</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+    header { background: #2b6cb0; color: #fff; padding: 20px; text-align: center; }
+    h1 { margin: 0; }
+    nav { background: #1a4d80; padding: 10px; text-align: center; }
+    nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    section { padding: 20px; max-width: 900px; margin: auto; }
+    .card { background: #fff; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    button, input[type=submit] { background: #2b6cb0; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover, input[type=submit]:hover { background: #1a4d80; }
+    footer { background: #1a4d80; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Whatsitcalledagain</h1>
+    <p>Will help you find the place you want to find</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#premium">Premium</a>
+    <a href="#moderator">Become a Moderator</a>
+</nav>
+
+<section id="home">
+    <div class="card">
+        <h2>Free Information Preview</h2>
+        <p>We specialize in helping you locate places, services, and hidden gems you might otherwise miss.
+        Here are some quick examples:</p>
+        <ul>
+            <li>Top-rated cafés in your city</li>
+            <li>Best local repair services</li>
+            <li>Hidden tourist attractions</li>
+        </ul>
+        <p>Want detailed, custom results? Unlock our premium section!</p>
+    </div>
+</section>
+
+<section id="premium">
+    <div class="card">
+        <h2>Premium Information</h2>
+        <p>Purchase access to our exclusive guides, location data, and personal recommendations.</p>
+       
+        <!-- PayPal Button -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="bonerross@gmail.com">
+            <input type="hidden" name="item_name" value="Premium Access - Whatsitcalledagain">
+            <input type="hidden" name="amount" value="5.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" value="Buy Premium Access ($5)">
+        </form>
+
+        <h3>Enter Premium Password</h3>
+        <input type="password" id="premiumPass" placeholder="Enter password">
+        <button onclick="unlockPremium()">Unlock</button>
+
+        <div id="premiumContent" style="display:none; margin-top:20px;">
+            <h3>Exclusive Premium Data</h3>
+            <p>Here you’ll find detailed search strategies, direct contact details,
+            curated maps, and insider-only tips that save you hours of searching.</p>
+        </div>
+    </div>
+</section>
+
+<section id="moderator">
+    <div class="card">
+        <h2>Apply to Become a Moderator</h2>
+        <form action="https://formspree.io/f/mnqekywl" method="POST">
+            <label>Your Name:</label><br>
+            <input type="text" name="name" required><br><br>
+            <label>Your Email:</label><br>
+            <input type="email" name="email" required><br><br>
+            <label>Why should we choose you?</label><br>
+            <textarea name="message" required></textarea><br><br>
+            <input type="submit" value="Submit Application">
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Whatsitcalledagain. All rights reserved.</p>
+</footer>
+
+<script>
+    function unlockPremium() {
+        const pass = document.getElementById('premiumPass').value;
+        if (pass === "premium2025") { // Change this password to whatever you like
+            document.getElementById('premiumContent').style.display = 'block';
+        } else {
+            alert('Incorrect password.');
+        }
+    }
+</script>
+
+</body>
+</html> 
